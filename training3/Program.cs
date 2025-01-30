@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+namespace AccessSpecifierdemo
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            Customer cst = new Customer();
+            cst.custId = 11;
+            cst.custName = "Liya";
+            cst.Display();
+        }
+    }
+}
