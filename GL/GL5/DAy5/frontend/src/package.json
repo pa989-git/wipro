@@ -1,0 +1,19 @@
+
+{
+  "name": "task-manager-frontend",
+  "version": "1.0.0",
+  "description": "Task management frontend with React and Redux",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.0",
+    "react-router-dom": "^6.4.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.0"
+  }
+}
