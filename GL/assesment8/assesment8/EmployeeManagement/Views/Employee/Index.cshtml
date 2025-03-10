@@ -1,0 +1,35 @@
+@model IEnumerable<BLL.Models.Employee>
+@{
+    ViewData["Title"] = "Employee List";
+}
+<h2>Employee List</h2>
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>DOJ</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.DateOfBirth.ToShortDateString()</td>
+                <td>@item.DateOfJoining.ToShortDateString()</td>
+                <td>@(item.Salary.HasValue ? item.Salary.Value.ToString("C") : "N/A")</td>
+                <td>@item.Dept</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-warning">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
